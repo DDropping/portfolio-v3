@@ -1,0 +1,27 @@
+export default {
+  languages: ["JavaScript", "Python", "Java", "C++", "Swift"],
+  web: [
+    "Node.js",
+    "React",
+    "Vue",
+    "Redux",
+    "Express",
+    "Django",
+    "GraphQL",
+    "HTML",
+    "CSS",
+    "SCSS/SASS",
+  ],
+  tools: [
+    "Git",
+    "Docker",
+    "AWS",
+    "Digital Ocean",
+    "Firebase",
+    "Mocha",
+    "Jest",
+    "Enzyme",
+  ],
+  databases: ["MongoDB", "MySQL", "PostgreSQL"],
+  mobile: ["UIKit", "React Native"],
+}
