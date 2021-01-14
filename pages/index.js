@@ -3,6 +3,13 @@ import styled from "styled-components";
 
 import Navbar from "../components/navbar";
 import Header from "../components/header";
+import About from "../components/about";
+import Skills from "../components/skills";
+
+const Layout = styled.section`
+  max-width: 1200px;
+  margin: 0 auto;
+`;
 
 export default function Home() {
   return (
@@ -15,6 +22,10 @@ export default function Home() {
       <main>
         <Navbar />
         <Header />
+        <Layout>
+          <About />
+          <Skills />
+        </Layout>
       </main>
     </div>
   );
