@@ -1,9 +1,8 @@
 import Head from "next/head";
 import styled from "styled-components";
 
-const H1 = styled.h1`
-  color: red;
-`;
+import Navbar from "../components/navbar";
+import Header from "../components/header";
 
 export default function Home() {
   return (
@@ -14,7 +13,8 @@ export default function Home() {
       </Head>
 
       <main>
-        <H1>hello world</H1>
+        <Navbar />
+        <Header />
       </main>
     </div>
   );
