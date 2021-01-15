@@ -8,9 +8,10 @@ import Skills from "../components/skills";
 import Projects from "../components/projects";
 
 const Layout = styled.section`
-  max-width: 1225px;
+  max-width: 1525px;
   padding: 0 25px;
   margin: 0 auto;
+  overflow: hidden;
 `;
 
 export default function Home() {
@@ -18,9 +19,8 @@ export default function Home() {
     <div>
       <Head>
         <title>David Dropping</title>
-        <link rel="icon" href="/icons/icon-144x144.png" />
+        <link rel="icon" href="/images/favicon.png" />
       </Head>
-
       <main>
         <Navbar />
         <Header />

@@ -1,14 +1,13 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  height: 300px;
+  height: 100%;
   background-color: #6a8aba;
   display: flex;
   justify-content: center;
   @media (max-width: 576px) {
     display: block;
     overflow: hidden;
-    height: 250px;
   }
 `;
 
@@ -35,4 +34,12 @@ export const LottieWrapper = styled.div`
     margin: 0 auto;
     opacity: 0.25;
   }
+`;
+
+export const LoadingLottieWrapper = styled.div`
+  position: absolute;
+  z-index: 101;
+  left: 0;
+  right: 0;
+  top: 35%;
 `;

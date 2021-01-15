@@ -142,7 +142,9 @@ const index = ({ project }) => {
                 Repository
               </ProjectLink>
             </Title>
-            <Description>{project.description}</Description>
+            <Description className="description">
+              {project.description}
+            </Description>
             <Description>{project.motivation}</Description>
           </TextContainer>
         </motion.div>
@@ -151,6 +153,7 @@ const index = ({ project }) => {
           variants={variants}
           initial={"imageHidden"}
           animate={inView ? "imageShow" : "imageHidden"}
+          style={{ marginRight: "50px" }}
         >
           <Shadow2 className="shadow2" color={project.secondaryColor} />
           <Shadow1 className="shadow1" color={project.primaryColor} />

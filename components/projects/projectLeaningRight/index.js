@@ -114,7 +114,6 @@ const index = ({ project }) => {
     rootMargin: "-100px 0px",
   });
 
-  console.log(project);
   return (
     <Container>
       <HoverEffect>
@@ -123,6 +122,7 @@ const index = ({ project }) => {
           variants={variants}
           initial={"imageHidden"}
           animate={inView ? "imageShow" : "imageHidden"}
+          style={{ marginLeft: "50px" }}
         >
           <Shadow2 className="shadow2" color={project.secondaryColor} />
           <Shadow1 className="shadow1" color={project.primaryColor} />

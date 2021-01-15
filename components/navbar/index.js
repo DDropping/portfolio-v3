@@ -1,13 +1,17 @@
 import React from "react";
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const Container = styled.div``;
 
 export const Ul = styled.ul`
+  height: 60px;
   display: flex;
   justify-content: center;
+  align-items: center;
   list-style-type: none;
   padding-left: 0;
+  margin: 0;
 `;
 
 export const Li = styled.li`
@@ -21,10 +25,34 @@ const index = () => {
   return (
     <Container>
       <Ul>
-        <Li>About</Li>
-        <Li>Skills</Li>
-        <Li>Projects</Li>
-        <Li>Contact</Li>
+        <motion.div
+          initial={{ y: "-30px", opacity: 0 }}
+          animate={{ y: "0", opacity: 1 }}
+          transition={{ duration: 0.5, delay: 2.5 }}
+        >
+          <Li>About</Li>
+        </motion.div>
+        <motion.div
+          initial={{ y: "-30px", opacity: 0 }}
+          animate={{ y: "0", opacity: 1 }}
+          transition={{ duration: 0.5, delay: 2.6 }}
+        >
+          <Li>Skills</Li>
+        </motion.div>
+        <motion.div
+          initial={{ y: "-30px", opacity: 0 }}
+          animate={{ y: "0", opacity: 1 }}
+          transition={{ duration: 0.5, delay: 2.7 }}
+        >
+          <Li>Projects</Li>
+        </motion.div>
+        <motion.div
+          initial={{ y: "-30px", opacity: 0 }}
+          animate={{ y: "0", opacity: 1 }}
+          transition={{ duration: 0.5, delay: 2.8 }}
+        >
+          <Li>Contact</Li>
+        </motion.div>
       </Ul>
     </Container>
   );
