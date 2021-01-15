@@ -1,7 +1,11 @@
 import React from "react";
 import Lottie from "react-lottie";
-import styled from "styled-components";
+import Image from "next/image";
+
 import animationData from "../lottie/test_skills.json";
+import { iconNames } from "../../constants/skills";
+
+import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;

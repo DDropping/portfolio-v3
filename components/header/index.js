@@ -21,14 +21,14 @@ const index = () => {
         <motion.div
           initial={{ y: "-40%", opacity: 0 }}
           animate={{ y: "0", opacity: 1 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
         >
           DAVID
         </motion.div>
         <motion.div
           initial={{ y: "-40%", opacity: 0 }}
           animate={{ y: "0", opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
+          transition={{ duration: 0.5 }}
         >
           DROPPING
         </motion.div>
