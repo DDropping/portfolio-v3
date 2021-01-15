@@ -1,14 +1,14 @@
-import boardrackImg from "../images/project-boardrack.png"
-import boardrackv2Image from "../images/project-boardrackv2.png"
-import samsDesignsImg from "../images/project-samsDesigns.png"
-import portfolioImg from "../images/project-portfolio.png"
-import sfsurentImg from "../images/project-sfsurent.png"
-import sortVisImg from "../images/project-sortVisualizer.png"
+// import boardrackImg from "../public/images/";
+// import boardrackv2Image from "../public"/images/br_v1.png";
+// import samsDesignsImg from "../public"/images/br_v1.png";
+// import portfolioImg from "../public"/images/br_v1.png";
+// import sfsurentImg from "../public"/images/br_v1.png";
+// import sortVisImg from "../public"/images/br_v1.png";
 
 export default [
   {
-    title: "BoardRack V2",
-    image: boardrackv2Image,
+    title: "BoardRack v2",
+    image: "/images/boardrackv2.png",
     description:
       "BoardRack V2 is a complete overhaul of the origional classified advertisement platform for buying or selling new and used surfboards.",
     motivation:
@@ -25,10 +25,13 @@ export default [
     website: "https://boardrack.dev/",
     github: "https://github.com/DDropping/BoardRack_v2",
     bgColor: "linear-gradient(#c2ffef, #c2ffe1)",
+    primaryColor: "#00448b",
+    secondaryColor: "#316396",
+    techIcons: [],
   },
   {
     title: "BoardRack",
-    image: boardrackImg,
+    image: "/images/boardrackv1.png",
     description:
       "BoardRack is a classified advertisement platform for buying or selling new and used surfboards. As it stands, it consists of a homepage for users to search or browse surfboards for sale, a user portal for CRUD operations pertaining to posts or account details, a messaging platform to allow interested parties to contact sellers, and location based services to show relevant posts depending on user's location.",
     motivation:
@@ -38,10 +41,13 @@ export default [
     website: "n/a",
     github: "https://github.com/DDropping/BoardRack",
     bgColor: "linear-gradient(#c2ffe1, #c2ffd3)",
+    primaryColor: "#0059b0",
+    secondaryColor: "#3a79b7",
+    techIcons: [],
   },
   {
     title: "Sort Visualizer",
-    image: sortVisImg,
+    image: "/images/sortvis.png",
     description:
       "Sort Visualizer is an educational application that teaches the basics of sorting algorithms in an easy to comprehend fashion. This app shows how sorting algorithms work on a high level step by step and also provides, time complexities, space analysis, pseudocode, and the actual algorithm written in javascript.",
     motivation:
@@ -51,10 +57,13 @@ export default [
     website: "https://www.sortvis.net/",
     github: "https://github.com/DDropping/SortingVisualizer",
     bgColor: "linear-gradient(#c2ffd3, #c2ffd3)",
+    primaryColor: "#1da67b",
+    secondaryColor: "#45ab8b",
+    techIcons: [],
   },
   {
     title: "Sams Designs",
-    image: samsDesignsImg,
+    image: "/images/samsdesign.png",
     description:
       "SamsDesigns is an ecommerce website designed to sell custom designed apparel by Sam Kerrigan. Using Gatsby to deliver blazing fast static pages ensures consistent site-wide navigation, and a positive user experience. Designed using Contentful's content management system allows for simple site modification for non-technical administrators.",
     motivation:
@@ -64,10 +73,13 @@ export default [
     website: "https://samsdesigns.netlify.com/",
     github: "https://github.com/DDropping/ecommerce",
     bgColor: "linear-gradient(#c2ffd3, #c2ffc3)",
+    primaryColor: "#e8968a",
+    secondaryColor: "#e8b7b0",
+    techIcons: [],
   },
   {
     title: "Portfolio (previous)",
-    image: portfolioImg,
+    image: "/images/portfoliov2.png",
     description:
       "This is the first iteration of my personal portfolio to showcase my current and previous projects.",
     motivation:
@@ -85,10 +97,13 @@ export default [
     website: "n/a",
     github: "https://github.com/DDropping/David-Portfolio",
     bgColor: "linear-gradient(#c2ffc3, #cdffc2)",
+    primaryColor: "#52dce8",
+    secondaryColor: "#82e4ec",
+    techIcons: [],
   },
   {
     title: "SFSU Rent",
-    image: sfsurentImg,
+    image: "/images/gatorrent.png",
     description:
       "SFSU Rent was a school team based project where I was the front-end lead of a seven person team. We developed a classified advertisement platform for students to find housing in the SF Bay Area.",
     motivation:
@@ -98,5 +113,8 @@ export default [
     website: "n/a",
     github: "https://github.com/DDropping/SFSURent",
     bgColor: "linear-gradient(#cdffc2, #d7ffc2)",
+    primaryColor: "#017bff",
+    secondaryColor: "#68aef9",
+    techIcons: [],
   },
-]
+];

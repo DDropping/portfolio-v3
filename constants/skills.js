@@ -24,4 +24,34 @@ export default {
   ],
   databases: ["MongoDB", "MySQL", "PostgreSQL"],
   mobile: ["UIKit", "React Native"],
-}
+};
+
+export const iconNames = {
+  languages: [
+    "icon_js.png",
+    "icon_python.webp",
+    "icon_java.webp",
+    "icon_c++.png",
+    "icon_swift.webp",
+  ],
+  databases: ["icon_mongo.png", "icon_sql.jpg", "icon_postgre.png"],
+  web: [
+    "icon_node.png",
+    "icon_react.png",
+    "icon_redux.png",
+    "icon_vue.png",
+    "icon_express.png",
+    "icon_django.webp",
+    "icon_html.png",
+    "icon_css.png",
+    "icon_sass.webp",
+  ],
+  tools: [
+    "icon_git.png",
+    "icon_github.png",
+    "icon_aws.png",
+    "icon_digitalocean.png",
+    "icon_vscode.png",
+    "icon_jest.png",
+  ],
+};
