@@ -8,7 +8,8 @@ import Skills from "../components/skills";
 import Projects from "../components/projects";
 
 const Layout = styled.section`
-  max-width: 1200px;
+  max-width: 1225px;
+  padding: 0 25px;
   margin: 0 auto;
 `;
 
