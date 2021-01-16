@@ -29,7 +29,9 @@ export const HoverEffect = styled.div`
     transform: perspective(1000px) rotateY(0deg);
   }
   @media (max-width: 1000px) {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 `;
 
