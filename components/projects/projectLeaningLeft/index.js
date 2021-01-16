@@ -89,6 +89,7 @@ export const TextContainer2 = styled.div`
   margin-right: 50px;
   @media (min-width: 1001px) {
     display: none;
+    margin-right: 0;
   }
 `;
 
@@ -173,7 +174,6 @@ const index = ({ project }) => {
           variants={variants}
           initial={"imageHidden"}
           animate={inView ? "imageShow" : "imageHidden"}
-          style={{ marginRight: "50px" }}
         >
           <Shadow2 className="shadow2" color={project.secondaryColor} />
           <Shadow1 className="shadow1" color={project.primaryColor} />

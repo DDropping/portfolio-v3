@@ -10,9 +10,12 @@ import Contact from "../components/contact";
 
 const Layout = styled.section`
   max-width: 1525px;
-  padding: 0 25px;
+  padding: 0 75px;
   margin: 0 auto;
   overflow: hidden;
+  @media (max-width: 1000px) {
+    padding: 0 20px;
+  }
 `;
 
 export default function Home() {
