@@ -2,23 +2,45 @@ import React from "react";
 import { motion } from "framer-motion";
 import Lottie from "react-lottie";
 import styled from "styled-components";
-import animationData from "../lottie/test_cycle.json";
+import animationData from "../lottie/test_cycle2.json";
 
 export const Container = styled.div`
   margin-top: 50px;
   display: flex;
   justify-content: space-evenly;
+  @media (max-width: 900px) {
+    display: block;
+  }
+`;
+
+export const HideWrapper1 = styled.div`
+  @media (max-width: 900px) {
+    display: none;
+  }
+`;
+
+export const HideWrapper2 = styled.div`
+  @media (min-width: 901px) {
+    display: none;
+  }
 `;
 
 export const LottieWrapper = styled.div`
-  height: 400px;
-  width: 400px;
+  height: 500px;
+  width: 500px;
+  @media (max-width: 900px) {
+    margin: 0 auto;
+  }
 `;
 
 export const Paragraph = styled.div`
   margin-top: 100px;
   max-width: 500px;
   font-size: 1.15rem;
+  text-indent: 25px;
+  @media (max-width: 900px) {
+    max-width: 100%;
+  }
 `;
 
 export const MyName = styled.span`
@@ -39,19 +61,21 @@ const defaultOptions = {
 const index = () => {
   return (
     <Container>
+      <HideWrapper1>
+        <motion.div
+          initial={{ x: "750px", opacity: 0 }}
+          animate={{ x: "0", opacity: 1 }}
+          transition={{ duration: 1.5, delay: 3 }}
+        >
+          <LottieWrapper>
+            <Lottie options={defaultOptions} />
+          </LottieWrapper>
+        </motion.div>
+      </HideWrapper1>
       <motion.div
         initial={{ x: "750px", opacity: 0 }}
         animate={{ x: "0", opacity: 1 }}
-        transition={{ duration: 1.5, delay: 3 }}
-      >
-        <LottieWrapper>
-          <Lottie options={defaultOptions} />
-        </LottieWrapper>
-      </motion.div>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8, delay: 3.5 }}
+        transition={{ duration: 1.5, delay: 3.5 }}
       >
         <Paragraph>
           <MyName>Hi, I'm David</MyName> A young professional who loves surfing,
@@ -71,6 +95,17 @@ const index = () => {
           . And while you're at it, feel free to reach out! I’d love to chat!
         </Paragraph>
       </motion.div>
+      <HideWrapper2>
+        <motion.div
+          initial={{ x: "750px", opacity: 0 }}
+          animate={{ x: "0", opacity: 1 }}
+          transition={{ duration: 1.5, delay: 3 }}
+        >
+          <LottieWrapper>
+            <Lottie options={defaultOptions} />
+          </LottieWrapper>
+        </motion.div>
+      </HideWrapper2>
     </Container>
   );
 };

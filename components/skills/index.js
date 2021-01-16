@@ -2,7 +2,7 @@ import React from "react";
 import Lottie from "react-lottie";
 import Image from "next/image";
 
-import animationData from "../lottie/test_skills.json";
+import animationData from "../lottie/gears.json";
 import { iconNames } from "../../constants/skills";
 
 import styled from "styled-components";
@@ -20,9 +20,14 @@ export const Icon = styled.img`
   margin: 0 5px;
 `;
 
-export const LottieWrapper = styled.div`
-  height: 400px;
-  width: 400px;
+export const GearLottieWrapper = styled.div`
+  position: absolute;
+  z-index: -1;
+  opacity: 0.05;
+  right: 0;
+  @media (max-width: 1500px) {
+    display: none;
+  }
 `;
 
 export const SkillsContainer = styled.div`
@@ -80,9 +85,21 @@ const listItem2 = {
   },
 };
 
+const defaultOptions = {
+  loop: true,
+  autoplay: true,
+  animationData: animationData,
+  rendererSettings: {
+    preserveAspectRatio: "xMidYMid slice",
+  },
+};
+
 const index = () => {
   return (
     <Container>
+      <GearLottieWrapper>
+        <Lottie options={defaultOptions} />
+      </GearLottieWrapper>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
