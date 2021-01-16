@@ -30,6 +30,8 @@ export const LottieWrapper = styled.div`
   width: 500px;
   @media (max-width: 900px) {
     margin: 0 auto;
+    max-width: 500px;
+    width: 100%;
   }
 `;
 
