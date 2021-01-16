@@ -23,7 +23,7 @@ export default function Home() {
     <div>
       <Head>
         <title>David Dropping</title>
-        <link rel="icon" href="/images/favicon.png" />
+        <link rel="icon" href="/images/favicon-192x192.png" />
       </Head>
       <main>
         <Navbar />
