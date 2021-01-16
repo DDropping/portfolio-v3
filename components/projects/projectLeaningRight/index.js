@@ -28,6 +28,9 @@ export const HoverEffect = styled.div`
     transition: all 0.8s ease 0.1s;
     transform: perspective(1000px) rotateY(0deg);
   }
+  @media (max-width: 1000px) {
+    display: block;
+  }
 `;
 
 export const ImageWrapper = styled.div`
@@ -37,6 +40,9 @@ export const ImageWrapper = styled.div`
   transition: all 0.8s ease 0.1s;
   transform: perspective(1000px) rotateY(20deg);
   width: 500px;
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 `;
 
 export const Shadow1 = styled.div`
@@ -51,6 +57,9 @@ export const Shadow1 = styled.div`
   width: 400px;
   background-color: ${({ color }) => color};
   opacity: 0.5;
+  @media (max-width: 600px) {
+    display: none;
+  }
 `;
 
 export const Shadow2 = styled.div`
@@ -65,10 +74,16 @@ export const Shadow2 = styled.div`
   width: 300px;
   background-color: ${({ color }) => color};
   opacity: 0.5;
+  @media (max-width: 600px) {
+    display: none;
+  }
 `;
 
 export const TextContainer = styled.div`
   margin-left: 50px;
+  @media (max-width: 1000px) {
+    margin-top: 25px;
+  }
 `;
 
 export const Title = styled.div`

@@ -28,15 +28,20 @@ export const HoverEffect = styled.div`
     transition: all 0.8s ease 0.1s;
     transform: perspective(1000px) rotateY(0deg);
   }
+  @media (max-width: 1000px) {
+    display: block;
+  }
 `;
 
 export const ImageWrapper = styled.div`
   box-shadow: 0 0 11px rgba(83, 68, 68, 0.2);
-  perspective: 1000px;
   transform-style: preserve-3d;
   transition: all 0.8s ease 0.1s;
   transform: perspective(1000px) rotateY(-20deg);
   width: 500px;
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 `;
 
 export const Shadow1 = styled.div`
@@ -51,6 +56,9 @@ export const Shadow1 = styled.div`
   width: 400px;
   background-color: ${({ color }) => color};
   opacity: 0.5;
+  @media (max-width: 600px) {
+    display: none;
+  }
 `;
 
 export const Shadow2 = styled.div`
@@ -65,10 +73,23 @@ export const Shadow2 = styled.div`
   width: 300px;
   background-color: ${({ color }) => color};
   opacity: 0.5;
+  @media (max-width: 600px) {
+    display: none;
+  }
 `;
 
-export const TextContainer = styled.div`
+export const TextContainer1 = styled.div`
   margin-right: 50px;
+  @media (max-width: 1000px) {
+    display: none;
+  }
+`;
+export const TextContainer2 = styled.div`
+  margin-top: 25px;
+  margin-right: 50px;
+  @media (min-width: 1001px) {
+    display: none;
+  }
 `;
 
 export const Title = styled.div`
@@ -123,7 +144,7 @@ const index = ({ project }) => {
           initial={"textHidden"}
           animate={inView ? "textShow" : "textHidden"}
         >
-          <TextContainer>
+          <TextContainer1>
             <Title>
               {project.title}
               <ProjectLink
@@ -145,7 +166,7 @@ const index = ({ project }) => {
               {project.description}
             </Description>
             <Description>{project.motivation}</Description>
-          </TextContainer>
+          </TextContainer1>
         </motion.div>
         <motion.div
           ref={ref}
@@ -167,6 +188,36 @@ const index = ({ project }) => {
               />
             </a>
           </ImageWrapper>
+        </motion.div>
+        <motion.div
+          ref={ref}
+          variants={variants}
+          initial={"textHidden"}
+          animate={inView ? "textShow" : "textHidden"}
+        >
+          <TextContainer2>
+            <Title>
+              {project.title}
+              <ProjectLink
+                href={project.website}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Website
+              </ProjectLink>
+              <ProjectLink
+                href={project.github}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Repository
+              </ProjectLink>
+            </Title>
+            <Description className="description">
+              {project.description}
+            </Description>
+            <Description>{project.motivation}</Description>
+          </TextContainer2>
         </motion.div>
       </HoverEffect>
     </Container>
