@@ -28,9 +28,9 @@ const index = () => {
       </motion.div>
       {projects.map((project, index) => {
         return index % 2 === 0 ? (
-          <ProjectLeaningRight project={project} />
+          <ProjectLeaningRight project={project} key={index} />
         ) : (
-          <ProjectLeaningLeft project={project} />
+          <ProjectLeaningLeft project={project} key={index} />
         );
       })}
     </Container>

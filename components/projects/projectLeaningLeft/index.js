@@ -114,7 +114,6 @@ const index = ({ project }) => {
     rootMargin: "-100px 0px",
   });
 
-  console.log(project);
   return (
     <Container>
       <HoverEffect>
