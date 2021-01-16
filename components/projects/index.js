@@ -5,7 +5,7 @@ import ProjectLeaningLeft from "./projectLeaningLeft";
 import projects from "../../constants/projects";
 import styled from "styled-components";
 
-const Container = styled.div`
+const Container = styled.section`
   margin-top: 100px;
 `;
 
@@ -18,7 +18,7 @@ const SectionHeader = styled.div`
 
 const index = () => {
   return (
-    <Container>
+    <Container id="projects_section">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

@@ -8,7 +8,7 @@ import { iconNames } from "../../constants/skills";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-export const Container = styled.div`
+export const Container = styled.section`
   margin-top: 100px;
 `;
 export const IconContianer = styled.div`
@@ -96,7 +96,7 @@ const defaultOptions = {
 
 const index = () => {
   return (
-    <Container>
+    <Container id="skills_section">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

@@ -9,7 +9,7 @@ import animationDataEmail from "../lottie/email.json";
 
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.section`
   background-color: #6a8aba;
   padding: 25px;
   margin-top: 50px;
@@ -119,7 +119,7 @@ const index = () => {
     rootMargin: "-100px 0px",
   });
   return (
-    <Container>
+    <Container id="contact_section">
       <motion.div
         ref={ref}
         variants={variants}

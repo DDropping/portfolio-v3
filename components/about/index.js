@@ -4,7 +4,7 @@ import Lottie from "react-lottie";
 import styled from "styled-components";
 import animationData from "../lottie/test_cycle2.json";
 
-export const Container = styled.div`
+export const Container = styled.section`
   margin-top: 50px;
   display: flex;
   justify-content: space-evenly;
@@ -60,7 +60,7 @@ const defaultOptions = {
 
 const index = () => {
   return (
-    <Container>
+    <Container id="about_section">
       <HideWrapper1>
         <motion.div
           initial={{ x: "750px", opacity: 0 }}
