@@ -6,6 +6,7 @@ import Header from "../components/header";
 import About from "../components/about";
 import Skills from "../components/skills";
 import Projects from "../components/projects";
+import Contact from "../components/contact";
 
 const Layout = styled.section`
   max-width: 1525px;
@@ -29,6 +30,7 @@ export default function Home() {
           <Skills />
           <Projects />
         </Layout>
+        <Contact />
       </main>
     </div>
   );
