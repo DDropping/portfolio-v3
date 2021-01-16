@@ -97,6 +97,9 @@ export const ProjectLink = styled.a`
   margin-left: 20px;
   color: #5692ce;
   cursor: pointer;
+  text-decoration: ${({ href }) => href === "n/a" && "line-through"};
+  color: ${({ href }) => (href === "n/a" ? "#c7c7c7" : "#5692ce")};
+  pointer-events: ${({ href }) => href === "n/a" && "none"};
 `;
 
 export const Description = styled.div``;
