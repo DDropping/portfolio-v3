@@ -97,9 +97,15 @@ const defaultOptions = {
 const index = () => {
   return (
     <Container>
-      <GearLottieWrapper>
-        <Lottie options={defaultOptions} />
-      </GearLottieWrapper>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 4.5 }}
+      >
+        <GearLottieWrapper>
+          <Lottie options={defaultOptions} />
+        </GearLottieWrapper>
+      </motion.div>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
