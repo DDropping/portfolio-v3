@@ -33,7 +33,7 @@ const index = () => {
 
   return (
     <motion.div
-      initial={{ height: "100vh", y: "-60px" }}
+      initial={{ height: "120vh", y: "-60px" }}
       animate={{ height: "300px", y: "0" }}
       transition={{ duration: 1.2, delay: 2, type: "spring" }}
     >
