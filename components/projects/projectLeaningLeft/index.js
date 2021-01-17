@@ -114,6 +114,20 @@ export const Description = styled.div``;
 
 export const Technologies = styled.div``;
 
+export const ItemWrapper = styled.div`
+  :hover > .underline {
+    transition: width 0.5s;
+    width: 100%;
+  }
+`;
+
+export const Underline = styled.div`
+  margin: 0 auto;
+  height: 2px;
+  width: 0;
+  background-color: #6a8aba;
+`;
+
 const variants = {
   imageHidden: {
     x: "100px",
@@ -158,14 +172,20 @@ const index = ({ project }) => {
                 target="_blank"
                 rel="noreferrer"
               >
-                Website
+                <ItemWrapper>
+                  Website
+                  <Underline className="underline" />
+                </ItemWrapper>
               </ProjectLink>
               <ProjectLink
                 href={project.github}
                 target="_blank"
                 rel="noreferrer"
               >
-                Repository
+                <ItemWrapper>
+                  Repository
+                  <Underline className="underline" />
+                </ItemWrapper>
               </ProjectLink>
             </Title>
             <Description className="description">
