@@ -161,7 +161,13 @@ const index = ({ project }) => {
           <Shadow2 className="shadow2" color={project.secondaryColor} />
           <Shadow1 className="shadow1" color={project.primaryColor} />
           <ImageWrapper className="mainImage">
-            <a href={project.website} target="_blank" rel="noreferrer">
+            <a
+              href={
+                project.website === "n/a" ? project.github : project.website
+              }
+              target="_blank"
+              rel="noreferrer"
+            >
               <Image
                 src={project.image}
                 alt="404 page not found"
