@@ -16,6 +16,7 @@ export const Title = styled.div`
   font-size: 5rem;
   color: #ffffff;
   z-index: 1;
+  cursor: default;
   @media (max-width: 576px) {
     font-size: 4rem;
     text-align: center;
@@ -28,11 +29,18 @@ export const Title = styled.div`
 export const LottieWrapper = styled.div`
   height: 400px;
   width: 400px;
+  margin: 0 30px;
+  transition: all 0.3s;
   @media (max-width: 576px) {
     height: 500px;
     width: 500px;
     margin: 0 auto;
     opacity: 0.25;
+  }
+  :hover {
+    height: 430px;
+    width: 430px;
+    margin: 0;
   }
 `;
 

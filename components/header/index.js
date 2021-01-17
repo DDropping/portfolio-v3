@@ -47,7 +47,7 @@ const index = () => {
         </LoadingLottieWrapper>
       </motion.div>
       <Container>
-        <Title>
+        <Title id="firstName">
           <motion.div
             initial={{ y: "-40%", opacity: 0 }}
             animate={{ y: "0", opacity: 1 }}
@@ -68,7 +68,7 @@ const index = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 3.25 }}
         >
-          <LottieWrapper>
+          <LottieWrapper id="isometric-lottie">
             <Lottie options={defaultOptions} />
           </LottieWrapper>
         </motion.div>

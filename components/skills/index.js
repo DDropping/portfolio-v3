@@ -9,7 +9,8 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 export const Container = styled.section`
-  margin-top: 100px;
+  padding: 100px 0;
+  border-radius: 100px;
 `;
 export const IconContianer = styled.div`
   display: flex;
@@ -17,7 +18,14 @@ export const IconContianer = styled.div`
   flex-wrap: wrap;
 `;
 export const Icon = styled.img`
-  margin: 0 5px;
+  margin: 0 10px;
+  height: 50px;
+  margin-bottom: 30px;
+  transition: all 0.3s;
+  :hover {
+    height: 80px;
+    margin: 0;
+  }
 `;
 
 export const GearLottieWrapper = styled.div`
@@ -111,7 +119,7 @@ const index = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 4.5 }}
       >
-        <SectionHeader>My Top Skills Are</SectionHeader>
+        <SectionHeader>My Favorite Technologies Are</SectionHeader>
       </motion.div>
       <motion.div
         variants={container}
@@ -124,40 +132,40 @@ const index = () => {
         }}
       >
         <motion.div variants={listItem}>
-          <Icon src="/icons/icon_js.png" style={{ height: "50px" }} />
+          <Icon src="/icons/icon_js.png" />
         </motion.div>
         <motion.div variants={listItem}>
-          <Icon src="/icons/icon_python.webp" style={{ height: "50px" }} />
+          <Icon src="/icons/icon_python.webp" />
         </motion.div>
         <motion.div variants={listItem}>
-          <Icon src="/icons/icon_react.png" style={{ height: "50px" }} />
+          <Icon src="/icons/icon_react.png" />
         </motion.div>
         <motion.div variants={listItem}>
-          <Icon src="/icons/icon_redux.png" style={{ height: "50px" }} />
+          <Icon src="/icons/icon_redux.png" />
         </motion.div>
         <motion.div variants={listItem}>
-          <Icon src="/icons/icon_express.png" style={{ height: "50px" }} />
+          <Icon src="/icons/icon_express.png" />
         </motion.div>
         <motion.div variants={listItem}>
-          <Icon src="/icons/icon_node.png" style={{ height: "50px" }} />
+          <Icon src="/icons/icon_node.png" />
         </motion.div>
         <motion.div variants={listItem}>
-          <Icon src="/icons/icon_mongo.png" style={{ height: "50px" }} />
+          <Icon src="/icons/icon_mongo.png" />
         </motion.div>
         <motion.div variants={listItem}>
-          <Icon src="/icons/icon_html.png" style={{ height: "50px" }} />
+          <Icon src="/icons/icon_html.png" />
         </motion.div>
         <motion.div variants={listItem}>
-          <Icon src="/icons/icon_css.png" style={{ height: "50px" }} />
+          <Icon src="/icons/icon_css.png" />
         </motion.div>
         <motion.div variants={listItem}>
-          <Icon src="/icons/icon_sass.webp" style={{ height: "50px" }} />
+          <Icon src="/icons/icon_sass.webp" />
         </motion.div>
         <motion.div variants={listItem}>
-          <Icon src="/icons/icon_git.png" style={{ height: "50px" }} />
+          <Icon src="/icons/icon_git.png" />
         </motion.div>
         <motion.div variants={listItem}>
-          <Icon src="/icons/icon_vscode.png" style={{ height: "50px" }} />
+          <Icon src="/icons/icon_vscode.png" />
         </motion.div>
       </motion.div>
       <br />
@@ -167,7 +175,7 @@ const index = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 5.5 }}
       >
-        <SectionHeader>But I also love using</SectionHeader>
+        <SectionHeader>But I Also Love Using</SectionHeader>
       </motion.div>
       <motion.div
         variants={container2}
@@ -180,34 +188,34 @@ const index = () => {
         }}
       >
         <motion.div variants={listItem2}>
-          <Icon src="/icons/icon_java.webp" style={{ height: "50px" }} />
+          <Icon src="/icons/icon_java.webp" />
         </motion.div>
         <motion.div variants={listItem2}>
-          <Icon src="/icons/icon_c++.png" style={{ height: "50px" }} />
+          <Icon src="/icons/icon_c++.png" />
         </motion.div>
         <motion.div variants={listItem2}>
-          <Icon src="/icons/icon_swift.webp" style={{ height: "50px" }} />
+          <Icon src="/icons/icon_swift.webp" />
         </motion.div>
         <motion.div variants={listItem2}>
-          <Icon src="/icons/icon_mysql.webp" style={{ height: "50px" }} />
+          <Icon src="/icons/icon_mysql.webp" />
         </motion.div>
         <motion.div variants={listItem2}>
-          <Icon src="/icons/icon_postgre.png" style={{ height: "50px" }} />
+          <Icon src="/icons/icon_postgre.png" />
         </motion.div>
         <motion.div variants={listItem2}>
-          <Icon src="/icons/icon_vue.png" style={{ height: "50px" }} />
+          <Icon src="/icons/icon_vue.png" />
         </motion.div>
         <motion.div variants={listItem2}>
-          <Icon src="/icons/icon_django.webp" style={{ height: "50px" }} />
+          <Icon src="/icons/icon_django.webp" />
         </motion.div>
         <motion.div variants={listItem2}>
-          <Icon src="/icons/icon_aws.png" style={{ height: "50px" }} />
+          <Icon src="/icons/icon_aws.png" />
         </motion.div>
         <motion.div variants={listItem2}>
-          <Icon src="/icons/icon_digitalocean.png" style={{ height: "50px" }} />
+          <Icon src="/icons/icon_digitalocean.png" />
         </motion.div>
         <motion.div variants={listItem2}>
-          <Icon src="/icons/icon_jest.png" style={{ height: "50px" }} />
+          <Icon src="/icons/icon_jest.png" />
         </motion.div>
       </motion.div>
     </Container>
