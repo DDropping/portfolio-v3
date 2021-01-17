@@ -6,6 +6,7 @@ import { useInView } from "react-intersection-observer";
 import animationDataGit from "../lottie/github.json";
 import animationDataIn from "../lottie/linkedin.json";
 import animationDataEmail from "../lottie/email.json";
+import animationDataExplosion from "../lottie/explosion.json";
 
 import styled from "styled-components";
 
@@ -16,6 +17,7 @@ export const Container = styled.section`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  overflow: hidden;
 `;
 
 export const ContentContainer = styled.div`
@@ -40,6 +42,16 @@ export const LottieWrapperEmail = styled.div`
   height: 70px;
   width: 70px;
 `;
+export const LottieWrapperExplosion = styled.div`
+  position: absolute;
+  top: -200px;
+  left: -100px;
+  height: 500px;
+  width: 500px;
+  opacity: 0.2;
+  z-index: -1;
+  display: none;
+`;
 
 export const Wrapper = styled.a`
   display: flex;
@@ -60,8 +72,17 @@ export const Quote = styled.div`
   font-size: 30px;
   color: #859fc5;
   max-width: 300px;
+  z-index: 2;
   @media (max-width: 800px) {
     display: none;
+  }
+  transition: all 0.3s;
+  cursor: default;
+  :hover {
+    color: #d3ebff;
+  }
+  :hover > .explosion {
+    display: block;
   }
 `;
 
@@ -89,6 +110,28 @@ const defaultOptionsEmail = {
     preserveAspectRatio: "xMidYMid slice",
   },
 };
+const defaultOptionsExplosion = {
+  loop: true,
+  autoplay: true,
+  animationData: animationDataExplosion,
+  rendererSettings: {
+    preserveAspectRatio: "xMidYMid slice",
+  },
+};
+
+export const ItemWrapper = styled.div`
+  :hover > .underline {
+    transition: width 0.5s;
+    width: 100%;
+  }
+`;
+
+export const Underline = styled.div`
+  margin: 0 auto;
+  height: 2px;
+  width: 0;
+  background-color: #d3ebff;
+`;
 
 const variants = {
   imageHidden: {
@@ -126,7 +169,12 @@ const index = () => {
         initial={"imageHidden"}
         animate={inView ? "imageShow" : "imageHidden"}
       >
-        <Quote>"Be the reason someone smiles today"</Quote>
+        <Quote>
+          "Be the reason someone smiles today"
+          <LottieWrapperExplosion className="explosion">
+            <Lottie options={defaultOptionsExplosion} />
+          </LottieWrapperExplosion>
+        </Quote>
       </motion.div>
       <motion.div
         ref={ref}
@@ -143,7 +191,10 @@ const index = () => {
             <LottieWrapperGit>
               <Lottie options={defaultOptionsGit} />
             </LottieWrapperGit>
-            <Text>/ddropping</Text>
+            <ItemWrapper>
+              <Text>/ddropping</Text>
+              <Underline className="underline" />
+            </ItemWrapper>
           </Wrapper>
 
           <Wrapper
@@ -154,7 +205,10 @@ const index = () => {
             <LottieWrapperIn>
               <Lottie options={defaultOptionsIn} />
             </LottieWrapperIn>
-            <Text>/ddropping</Text>
+            <ItemWrapper>
+              <Text>/ddropping</Text>
+              <Underline className="underline" />
+            </ItemWrapper>
           </Wrapper>
 
           <Wrapper
@@ -165,7 +219,10 @@ const index = () => {
             <LottieWrapperEmail>
               <Lottie options={defaultOptionsEmail} />
             </LottieWrapperEmail>
-            <Text>ddropping@gmail.com</Text>
+            <ItemWrapper>
+              <Text>ddropping@gmail.com</Text>
+              <Underline className="underline" />
+            </ItemWrapper>
           </Wrapper>
         </ContentContainer>
       </motion.div>
