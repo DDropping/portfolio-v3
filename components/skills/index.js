@@ -9,7 +9,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 export const Container = styled.section`
-  padding: 100px 0;
+  padding: 40px;
   border-radius: 100px;
 `;
 export const IconContianer = styled.div`
