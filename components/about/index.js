@@ -2,12 +2,12 @@ import React from "react";
 import { motion } from "framer-motion";
 import Lottie from "react-lottie";
 import styled from "styled-components";
-import animationData from "../lottie/test_cycle2.json";
+import animationData from "../lottie/bikeLeft.json";
 
 export const Container = styled.section`
   margin-top: 50px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   @media (max-width: 900px) {
     display: block;
   }
@@ -32,6 +32,13 @@ export const LottieWrapper = styled.div`
     margin: 0 auto;
     max-width: 500px;
     width: 100%;
+  }
+  transition: all 0.3s;
+  :hover {
+    height: 550px;
+    width: 550px;
+    margin-left: -50px;
+    margin-top: -50px;
   }
 `;
 
