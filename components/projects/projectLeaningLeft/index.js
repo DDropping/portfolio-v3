@@ -212,7 +212,7 @@ const index = ({ project }) => {
             >
               <Image
                 src={project.image}
-                alt="404 page not found"
+                alt="Project Image"
                 layout="responsive"
                 width={1280}
                 height={750}
