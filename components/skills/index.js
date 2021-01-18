@@ -1,6 +1,7 @@
 import React from "react";
 import Lottie from "react-lottie";
 import Image from "next/image";
+import { useInView } from "react-intersection-observer";
 
 import animationData from "../lottie/gears.json";
 import { iconNames } from "../../constants/skills";
@@ -63,7 +64,7 @@ const container = {
   show: {
     opacity: 1,
     transition: {
-      delayChildren: 5,
+      delayChildren: 0,
       staggerChildren: 0.1,
     },
   },
@@ -80,7 +81,7 @@ const container2 = {
   show: {
     opacity: 1,
     transition: {
-      delayChildren: 6,
+      delayChildren: 0.5,
       staggerChildren: 0.1,
     },
   },
@@ -103,28 +104,36 @@ const defaultOptions = {
 };
 
 const index = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    rootMargin: "-100px 0px",
+  });
+
   return (
     <Container id="skills_section">
       <motion.div
+        ref={ref}
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 4.5 }}
+        animate={inView ? { opacity: 1 } : { opacity: 0 }}
+        transition={{ duration: 0.5, delay: 0 }}
       >
         <GearLottieWrapper>
           <Lottie options={defaultOptions} />
         </GearLottieWrapper>
       </motion.div>
       <motion.div
+        ref={ref}
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 4.5 }}
+        animate={inView ? { opacity: 1 } : { opacity: 0 }}
+        transition={{ duration: 0.5, delay: 0 }}
       >
         <SectionHeader>My Favorite Technologies Are</SectionHeader>
       </motion.div>
       <motion.div
+        ref={ref}
         variants={container}
         initial="hidden"
-        animate="show"
+        animate={inView ? "show" : "hidden"}
         style={{
           display: "flex",
           justifyContent: "center",
@@ -171,16 +180,18 @@ const index = () => {
       <br />
 
       <motion.div
+        ref={ref}
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 5.5 }}
+        animate={inView ? { opacity: 1 } : { opacity: 0 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
       >
         <SectionHeader>But I Also Love Using</SectionHeader>
       </motion.div>
       <motion.div
+        ref={ref}
         variants={container2}
         initial="hidden"
-        animate="show"
+        animate={inView ? "show" : "hidden"}
         style={{
           display: "flex",
           justifyContent: "center",
