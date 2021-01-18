@@ -1,64 +1,10 @@
 import React from "react";
 import Lottie from "react-lottie";
-import Image from "next/image";
+import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 import animationData from "../lottie/gears.json";
-import { iconNames } from "../../constants/skills";
-
-import styled from "styled-components";
-import { motion } from "framer-motion";
-
-export const Container = styled.section`
-  padding: 40px;
-  border-radius: 100px;
-  margin-top: 50px;
-`;
-export const IconContianer = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-`;
-export const Icon = styled.img`
-  margin: 0 10px;
-  height: 50px;
-  margin-bottom: 30px;
-  transition: all 0.3s;
-  :hover {
-    height: 80px;
-    margin: 0;
-  }
-`;
-
-export const GearLottieWrapper = styled.div`
-  position: absolute;
-  z-index: -1;
-  opacity: 0.05;
-  right: 0;
-  @media (max-width: 1500px) {
-    display: none;
-  }
-`;
-
-export const SkillsContainer = styled.div`
-  margin-top: 100px;
-  max-width: 500px;
-  font-size: 1.15rem;
-`;
-
-export const Title = styled.div``;
-
-export const SkillList = styled.div`
-  margin-left: 25px;
-  margin-bottom: 20px;
-`;
-
-const SectionHeader = styled.div`
-  font-size: 1.75rem;
-  color: #396caa;
-  font-weight: bold;
-  text-align: center;
-`;
+import { Container, Icon, GearLottieWrapper, SectionHeader } from "./style";
 
 const container = {
   hidden: { opacity: 0 },
