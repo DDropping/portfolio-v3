@@ -5,7 +5,7 @@ import styled from "styled-components";
 import animationData from "../lottie/bikeLeft.json";
 
 export const Container = styled.section`
-  margin-top: 50px;
+  margin-top: 100px;
   display: flex;
   justify-content: center;
   @media (max-width: 900px) {

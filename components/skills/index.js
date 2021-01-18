@@ -12,6 +12,7 @@ import { motion } from "framer-motion";
 export const Container = styled.section`
   padding: 40px;
   border-radius: 100px;
+  margin-top: 50px;
 `;
 export const IconContianer = styled.div`
   display: flex;
