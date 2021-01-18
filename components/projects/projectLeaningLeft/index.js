@@ -89,6 +89,7 @@ const index = ({ project }) => {
           variants={variants}
           initial={"imageHidden"}
           animate={inView ? "imageShow" : "imageHidden"}
+          style={{ width: "100%" }}
         >
           <Shadow2 className="shadow2" color={project.secondaryColor} />
           <Shadow1 className="shadow1" color={project.primaryColor} />
