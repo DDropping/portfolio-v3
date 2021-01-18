@@ -1,9 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import styled from "styled-components";
+
 import ProjectLeaningRight from "./projectLeaningRight";
 import ProjectLeaningLeft from "./projectLeaningLeft";
 import projects from "../../constants/projects";
-import styled from "styled-components";
 
 const Container = styled.section`
   margin-top: 100px;
@@ -17,12 +19,18 @@ const SectionHeader = styled.div`
 `;
 
 const index = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    rootMargin: "-100px 0px",
+  });
+
   return (
     <Container id="projects_section">
       <motion.div
+        ref={ref}
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 7 }}
+        animate={inView ? { opacity: 1 } : { opacity: 0 }}
+        transition={{ duration: 0.5 }}
       >
         <SectionHeader>Some Recent Projects</SectionHeader>
       </motion.div>
