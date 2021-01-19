@@ -5,7 +5,7 @@ export const Container = styled.div`
   background-color: #6a8aba;
   display: flex;
   justify-content: center;
-  @media (max-width: 576px) {
+  @media (max-width: 900px) {
     display: block;
     overflow: hidden;
   }
@@ -17,7 +17,7 @@ export const Title = styled.div`
   color: #ffffff;
   z-index: 1;
   cursor: default;
-  @media (max-width: 576px) {
+  @media (max-width: 900px) {
     font-size: 4rem;
     text-align: center;
     position: absolute;
@@ -31,10 +31,10 @@ export const LottieWrapper = styled.div`
   width: 400px;
   margin: 0 30px;
   transition: all 0.3s;
-  @media (max-width: 576px) {
+  @media (max-width: 900px) {
     height: 500px;
     width: 500px;
-    margin: 0 auto;
+    margin-left: auto;
     opacity: 0.25;
   }
   :hover {
